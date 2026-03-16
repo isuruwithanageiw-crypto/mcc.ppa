@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC Alumni Association - Matara Central College</title>
+    
+    <!-- Tailwind CSS (CDN for standalone usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            50: '#f8fafc',
+                            400: '#94a3b8',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        accent: {
+                            blue: '#38bdf8',
+                            purple: '#818cf8',
+                            gold: '#fcd34d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased relative">
+
+    <!-- Glowing Background effect -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[120px] blob"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-600/20 rounded-full blur-[120px] blob" style="animation-delay: -5s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 left-0 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-accent-blue to-accent-purple rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-white"></i>
+                    </div>
+                    <div class="ml-4">
+                        <span class="text-xl font-bold text-white tracking-wide block leading-tight">MCCAA</span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-widest block">Matara Central College</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-accent-blue font-semibold hover:text-white transition-colors px-3 py-2 rounded-md">Home</a>
+                        <a href="about.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md font-medium">About Us</a>
+                        <a href="events.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md font-medium">Events</a>
+                        <a href="contact.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md font-medium">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzBalda6Nn-b4kq16stUE29MdQH4reBjcK0Cnvt-GQJRZoSA/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-bold px-6 py-2.5 rounded-full text-sm inline-flex items-center gap-2">
+                        <span>Join Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobileMenuBtn" type="button" class="text-slate-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobileMenu" class="md:hidden hidden glass-card mt-2 mx-4 rounded-xl overflow-hidden border border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-accent-blue block px-3 py-2 rounded-md text-base font-semibold">Home</a>
+                <a href="about.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="events.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Events</a>
+                <a href="contact.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzBalda6Nn-b4kq16stUE29MdQH4reBjcK0Cnvt-GQJRZoSA/viewform?pli=1" target="_blank" class="w-full text-center mt-4 btn-primary text-white font-bold px-4 py-3 rounded-xl block">
+                    Join Alumni Association
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="scroll-animate text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 border-white/10">
+                        <span class="w-2 h-2 rounded-full bg-accent-blue animate-ping"></span>
+                        <span class="w-2 h-2 rounded-full bg-accent-blue absolute"></span>
+                        <span class="text-sm font-medium text-slate-300 ml-2">Official Alumni Network</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                        Uniting the <br/>
+                        <span class="text-gradient">Legacy</span> of <br/>
+                        MCC Graduates
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Join the prestigious Matara Central College Alumni Association. Reconnect with old friends, build professional networks, and contribute to the future of our alma mater.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzBalda6Nn-b4kq16stUE29MdQH4reBjcK0Cnvt-GQJRZoSA/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="btn-primary text-white text-lg font-bold px-8 py-4 rounded-full inline-flex items-center justify-center gap-3">
+                            <span>Membership Application</span>
+                            <i class="fa-solid fa-file-signature"></i>
+                        </a>
+                        <a href="about.html" class="btn-secondary text-white text-lg font-bold px-8 py-4 rounded-full inline-flex items-center justify-center gap-3">
+                            <span>Explore Our Story</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center justify-center lg:justify-start gap-6">
+                        <div class="flex -space-x-4">
+                            <img class="w-12 h-12 rounded-full border-2 border-slate-900 object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=100&auto=format&fit=crop" alt="Alumni">
+                            <img class="w-12 h-12 rounded-full border-2 border-slate-900 object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop" alt="Alumni">
+                            <img class="w-12 h-12 rounded-full border-2 border-slate-900 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Alumni">
+                            <img class="w-12 h-12 rounded-full border-2 border-slate-900 object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" alt="Alumni">
+                            <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-xs font-bold text-white z-10">+2K</div>
+                        </div>
+                        <p class="text-sm font-medium text-slate-400">Join 2,000+ registered members <br>from around the globe.</p>
+                    </div>
+                </div>
+
+                <!-- Hero Image Grid -->
+                <div class="scroll-animate relative mt-10 lg:mt-0 delay-200 h-[600px] hidden sm:block">
+                    <!-- Image 1 -->
+                    <div class="absolute top-0 right-10 w-64 h-80 rounded-2xl overflow-hidden glass-card p-2 animate-float shadow-2xl z-20">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920&auto=format&fit=crop" alt="Graduation" class="w-full h-full object-cover rounded-xl filter brightness-90">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="absolute bottom-10 left-0 w-72 h-64 rounded-2xl overflow-hidden glass-card p-2 animate-float shadow-2xl z-30" style="animation-delay: -2s;">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" alt="Networking" class="w-full h-full object-cover rounded-xl filter brightness-90">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-48 h-48 rounded-full overflow-hidden border-4 border-slate-800/50 shadow-2xl z-10 animate-float" style="animation-delay: -4s;">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=1000&auto=format&fit=crop" alt="Event" class="w-full h-full object-cover filter brightness-90">
+                    </div>
+                    
+                    <!-- Decorative element -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-blue/20 rounded-full blur-[100px] -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats-section" class="py-12 relative z-20 border-y border-white/5 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-black text-white mb-2"><span class="stat-counter" data-target="1950">0</span></div>
+                    <div class="text-sm text-slate-400 font-medium uppercase tracking-wider">Founded</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-white mb-2"><span class="stat-counter" data-target="5000" data-suffix="+">0</span></div>
+                    <div class="text-sm text-accent-blue font-medium uppercase tracking-wider">Active Members</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-white mb-2"><span class="stat-counter" data-target="120" data-suffix="+">0</span></div>
+                    <div class="text-sm text-slate-400 font-medium uppercase tracking-wider">Global Events</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-white mb-2"><span class="stat-counter" data-target="15" data-suffix="+">0</span></div>
+                    <div class="text-sm text-slate-400 font-medium uppercase tracking-wider">Global Chapters</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Why Complete the <span class="text-gradient">Application?</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Becoming an official member of the Matara Central College Alumni Association opens doors to endless opportunities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl scroll-animate delay-100 group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+                        <i class="fa-solid fa-users text-2xl text-accent-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Networking Hub</h3>
+                    <p class="text-slate-400 leading-relaxed">Connect with thousands of graduates working in diverse industries across the globe. Find mentors or become one.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl scroll-animate delay-200 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+                        <i class="fa-solid fa-calendar-star text-2xl text-accent-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Events</h3>
+                    <p class="text-slate-400 leading-relaxed">Get VIP access and early invitations to our annual grand get-togethers, sports meets, and professional seminars.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl scroll-animate delay-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl text-accent-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Give Back</h3>
+                    <p class="text-slate-400 leading-relaxed">Contribute to scholarship funds, infrastructure development, and student welfare programs at our beloved school.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center scroll-animate delay-400">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzBalda6Nn-b4kq16stUE29MdQH4reBjcK0Cnvt-GQJRZoSA/viewform?pli=1" target="_blank" class="inline-flex items-center gap-2 text-accent-blue font-bold hover:text-white transition-colors text-lg border-b-2 border-accent-blue hover:border-white pb-1">
+                    <span>Fill the Google Form Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-white/10 pt-16 pb-8 mt-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-accent-blue to-accent-purple rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-graduation-cap text-xl text-white"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-white tracking-wide block">MCCAA</span>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        Dedicated to fostering a sense of community, tradition, and progress among the proud alumni of Matara Central College.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-400 transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-pink-600 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-700 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-slate-400 hover:text-accent-blue transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-slate-400 hover:text-accent-blue transition-colors">About Association</a></li>
+                        <li><a href="events.html" class="text-slate-400 hover:text-accent-blue transition-colors">Events & News</a></li>
+                        <li><a href="contact.html" class="text-slate-400 hover:text-accent-blue transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Membership</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzBalda6Nn-b4kq16stUE29MdQH4reBjcK0Cnvt-GQJRZoSA/viewform?pli=1" target="_blank" class="text-slate-400 hover:text-accent-blue transition-colors">Submit Application</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-accent-blue transition-colors">Member Benefits</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-accent-blue transition-colors">Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 Matara Central College Alumni Association. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
